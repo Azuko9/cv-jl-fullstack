@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface Experience {
   id: string;
   company: string;
@@ -24,4 +26,13 @@ export interface DisplayExperience {
   fullDesc: string;
   missions: string[];
   tags: string[];
+}
+
+export interface Formation {
+  title: ReactNode;
+  id: string;
+  institution: string;
+  degree: string;
+  period: string;
+  details: string | null;
 }

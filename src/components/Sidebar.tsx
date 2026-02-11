@@ -41,13 +41,13 @@ const Sidebar = ({ theme, setTheme, currentTheme }: SidebarProps) => {
 
       <div className="mb-10 space-y-4 pt-6 border-t border-white/10">
         <div className={`p-2 rounded-2xl ${theme === 'dark' ? 'bg-white/5' : 'bg-slate-100/50'} border ${currentTheme.border} flex justify-between gap-1 shadow-inner`}>
-          <button onClick={() => setTheme('light')} className={`flex-1 flex flex-col items-center gap-1 p-3 rounded-xl transition-all ${theme === 'light' ? 'bg-white text-blue-600 shadow-lg' : 'text-slate-500'}`}>
+          <button onClick={() => setTheme('light')} className={`flex-1 flex flex-col items-center gap-1 p-3 rounded-xl transition-all cursor-pointer ${theme === 'light' ? 'bg-white text-blue-600 shadow-lg' : 'text-slate-500'}`}>
             <Sun size={20}/>
           </button>
-          <button onClick={() => setTheme('octime')} className={`flex-1 flex flex-col items-center gap-1 p-3 rounded-xl transition-all ${theme === 'octime' ? 'bg-blue-600 text-white shadow-xl' : 'text-slate-500'}`}>
+          <button onClick={() => setTheme('octime')} className={`flex-1 flex flex-col items-center gap-1 p-3 rounded-xl transition-all cursor-pointer ${theme === 'octime' ? 'bg-blue-600 text-white shadow-xl' : 'text-slate-500'}`}>
             <Palette size={20}/>
           </button>
-          <button onClick={() => setTheme('dark')} className={`flex-1 flex flex-col items-center gap-1 p-3 rounded-xl transition-all ${theme === 'dark' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-500'}`}>
+          <button onClick={() => setTheme('dark')} className={`flex-1 flex flex-col items-center gap-1 p-3 rounded-xl transition-all cursor-pointer ${theme === 'dark' ? 'bg-slate-700 text-white shadow-lg' : 'text-slate-500'}`}>
             <Moon size={20}/>
           </button>
         </div>

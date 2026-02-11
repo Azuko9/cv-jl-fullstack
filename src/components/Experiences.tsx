@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Terminal, DatabaseZap } from 'lucide-react';
+import { Terminal, DatabaseZap, ChevronDown } from 'lucide-react';
 import { DisplayExperience } from '@/types';
 
 interface ExperiencesProps {
@@ -34,7 +34,10 @@ const Experiences = ({ experiences, selectedExp, setSelectedExp }: ExperiencesPr
                 <p className="text-base font-black text-blue-600 uppercase">{exp.role}</p>
               </div>
             </div>
-            <span className="text-xs font-black bg-slate-900 text-white px-6 py-3 rounded-2xl shadow-xl">{exp.date}</span>
+            <div className="flex items-center gap-4">
+              <span className="text-xs font-black bg-slate-900 text-white px-6 py-3 rounded-2xl shadow-xl">{exp.date}</span>
+              <ChevronDown className={`transition-transform duration-300 ${selectedExp === exp.id ? 'rotate-180 text-blue-600' : 'text-slate-400'}`} />
+            </div>
           </div>
           {selectedExp === exp.id && (
             <div className="pt-10 border-t border-slate-50 mt-12 space-y-10 animate-in slide-in-from-top-4 duration-500">
